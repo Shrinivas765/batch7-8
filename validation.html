@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+ console.log("entry")
+  let x = document.getElementById("numb").value;
+ 
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  
+
+
+//   var mobile = document.getElementById("numb").value;
+//   mobile validation
+        // var pattern = /^[7-9][0-9]{9}$/;
+         // var pattern = /^[7-9][0-9]{9}$/;
+        // var nameReg = /^[A-Za-z]*$/;
+        // var regName = /^[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+$/;
+        // if (pattern.test(mobile)) {
+        //     alert("Your mobile : "+mobile);
+        //     return true;
+        // }
+        // alert("It is not valid mobile");
+        // return false;
+
+
+        document.getElementById("demo").innerHTML = text;
+
+}
+</script>
+
+</body>
+</html> 

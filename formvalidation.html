@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input placeholder="Enter here first Name:" type="text" id="fname"><br>
+        <input placeholder="Enter here Last Name:" type="text" id="lname"><br>
+        <input type="number" placeholder="Enter here mobile no:" id="mobile" /><br>
+        <input type="email" placeholder="Enter here email:" id="email" required>
+
+        <button onclick="handlesubmit()">submit</button>
+    </div>
+    <script>
+        function handlesubmit() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var mobile = document.getElementById("mobile").value;
+            var email = document.getElementById("email").value;
+            // email 
+
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (validRegex.test(email)) {
+                console.log('your email is:' + email)
+            } else {
+                alert("Invalid email")
+            }
+
+// mobile no
+            var mobilereg = /^\d{10}$/;
+            if (mobilereg.test(mobile)) {
+                console.log(' your mobile number is:' + mobile)
+
+            }
+            else {
+                alert("Enter valid mobile number......")
+            }
+// last name and  first name
+            var nameReg = /^[A-Za-z]*$/;
+            if (nameReg.test(lname)) {
+                console.log(' your full name is:' + lname)
+
+            }
+            else {
+                alert("Enter valid last name......")
+            }
+
+
+            if (nameReg.test(fname)) {
+                console.log(fname)
+                
+
+                return false;
+            } else {
+                alert('please give Valid name .');
+                return true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

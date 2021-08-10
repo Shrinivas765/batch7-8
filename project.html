@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Enter Name Here"><br>
+    <input type="text" id="EngishA" placeholder="Enter Mark for English"><br>
+    <input type="text" id="ComputerA" placeholder="Enter Mark for Computer"><br>
+    <input type="text" id="SOMA" placeholder="Enter Mark for SOM"><br>
+    <input type="text" id="DSA" placeholder="Enter Mark for DS"><br>
+    <button type="submit" onclick="Datasubmit()">Submit</button>
+    <div>
+        <h1> Student Grade Point </h1>
+
+        <hr>
+        <table>
+            <p id="nameA"></p>
+        <p id="English"></p>
+        <span id="Computer"></span>
+        <p id="SOM"></p>
+        <p id="DS"></p>
+        <p id="total"></p>
+        <p id="per"></p>
+        </table>
+        
+
+    </div>
+    <script>
+        function Datasubmit() {
+            console.log("entry")
+            var name = document.getElementById("name").value;
+            console.log(name)
+            var English = document.getElementById("EngishA").value
+            console.log(English)
+            var Computer = document.getElementById("ComputerA").value
+            var SOM = document.getElementById("SOMA").value;
+            var DS = document.getElementById("DSA").value;
+
+            total =parseFloat(English) +  parseFloat(Computer)  + parseFloat(SOM)  + parseFloat(DS) ;
+
+            console.log(total);
+
+            per = (total / 400) * 100
+            console.log("percent" + per)
+            document.getElementById("nameA").innerHTML = ("Student Name :" + name)
+            document.getElementById("English").innerHTML = ("Mark For English :" + English);
+            document.getElementById("Computer").innerHTML = ("Mark For Computer :" + Computer);
+            document.getElementById("SOM").innerHTML = ("Mark For SOM :" + SOM);
+            document.getElementById("DS").innerHTML = ("Mark For DS :" + DS);
+            document.getElementById("total").innerHTML = ("Total Marks :" + total);
+            document.getElementById("per").innerHTML = ("Percentage :" + per + "%");
+
+        }
+
+
+    </script>
+</body>
+
+</html>
