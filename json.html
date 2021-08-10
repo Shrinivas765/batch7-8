@@ -8,23 +8,15 @@
 </head>
 <body>
     <script>
-        let student = {
-  name: 'John',
-  age: 30,
-  isAdmin: false,
-  courses: ['html', 'css', 'js'],
-  wife: null
-};
+        let arr = ["John", "Smith"]
 
-let json = JSON.stringify(student);
+// destructuring assignment
+// sets firstName = arr[0]
+// and surname = arr[1]
+let [firstName, surname] = arr;
 
-alert(typeof json); // we've got a string!
-
-alert(json);
-let obj = JSON.parse(json)
-alert(typeof obj)
-
-alert(obj.name)
+document.write(firstName); // John
+document.write(surname);  // Smith
     </script>
 </body>
 </html>
