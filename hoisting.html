@@ -7,14 +7,15 @@
 <p id="demo"></p>
 
 <script>
-let text = '{"employees":[' +
-'{"firstName":"John","lastName":"Doe" },' +
-'{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]}';
+let text = '{"emp":[' +
+    '{"firstname":"dhanu","lastname":"patil"},'+
+    '{"firstname":"dhanu123","lastname":"patil123"},'+
+    '{"firstname":"dhanu52","lastname":"patil52"},'+
+    '{"firstname":"dhanu56","lastname":"patil56"}]}';
 
 const obj = JSON.parse(text);
 document.getElementById("demo").innerHTML =
-obj.employees[1].firstName + " " + obj.employees[1].lastName;
+obj.emp[2].firstname + " " + obj.emp[1].lastname;
 </script>
 
 </body>
