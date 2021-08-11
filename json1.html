@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <h1>welcome<span id="h1"></span1></h1>
+    <script>
+        let student = {
+            name:"Avnish",
+            subject:["sub1","sub2","sub3"],
+            isStudent:true
+
+        }
+        let studentstr = JSON.stringify(student )
+        document.write(studentstr.name)
+
+        let studentpar = JSON.parse(studentstr)
+        document.getElementById("h1").innerHTML= studentpar.name
+        // document.write(studentpar.isStudent)
+        // console.log(student)
+    </script>
+</body>
+</html>
