@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>create elements</title>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>welcome</h1>
+            <ul id="ul1">
+                <li id="id1">list 1</li>
+                <li>list 1</li>
+                <li>list 1</li>
+                <li>list 1</li>
+                <!-- <li>list 2</li> -->
+            </ul>
+        </div>
+        <script>
+            var ele = document.getElementById('id1'); 
+            console.log(ele)
+var element1 = document.createElement('li');
+element1.className="li2";
+element1.id ="id2";
+element1.setAttribute('name','myname');
+element1.innerHTML='list 2';
+console.log(ele.innerText)
+console.log(element1)
+ele.replaceWith(element1)
+console.log(ele)
+// let ul = document.querySelector('ul')
+// console.log(ul)
+// console.log(element1)
+// ul.appendChild(element1);
+        </script>
+    </body>
+</html>

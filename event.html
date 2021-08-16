@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1 id="heading">Welcome</h1>
+    <button id="btn1">Submit</button>
+    <script>
+// document.getElementById('heading').addEventListener('mousedown',funcsubmit)
+document.getElementById('btn1').addEventListener('click',fun1)
+document.getElementById("btn1").addEventListener('dblclick' ,fun2)
+document.getElementById('btn1').addEventListener('mousedown',fun3)
+// function funcsubmit(e){
+
+//     console.log("you click the title",e)
+// }
+
+function fun1 (){
+    console.log("click on btn")
+}
+function fun2 (){
+    console.log("you dblclick btn")
+}
+
+function fun3 (){
+    console.log("you mousedown btn")
+}
+    </script>
+</body>
+</html>
