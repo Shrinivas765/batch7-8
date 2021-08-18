@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            margin-top: 100px;
+        }
+        li,div{
+            border: 2px solid black;
+            width: 25%;
+            margin-top: 5px;
+            text-align: center;
+            padding: 25px;
+            background-color: goldenrod;
+            border-radius: 5px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button type="submit" onclick="subFun()">Add Item</button>
+    <ul id="ul1">
+        <li>
+            Ram
+            <button>Delete</button>
+       </li>
+        <li>Shyam</li>
+        <li>Shyam</li>
+    </ul>
+    <script>
+function subFun(){
+
+    var inputval = document.getElementById("input1").value;
+    // console.log(inputval)
+    var ul = document.getElementById('ul1')
+        console.log(ul)
+        var ele = document.createElement('li')
+        ele.innerHTML=inputval
+        ul.appendChild(ele)
+       var a= document.getElementById("input1").value = " ";
+        console.log(a)
+}
+
+        
+    </script>
+</body>
+</html>
