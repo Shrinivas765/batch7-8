@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 400px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: cornflowerblue;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        .container{
+            width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+ <input type="text" id="input1">
+    <button onclick="submit()">Add item</button>
+    <ul id="ul1">
+        <li>ram</li>
+        <li>shyam</li>
+    </ul>
+    </div>
+   
+
+    <script>
+        function submit() {
+            var ul = document.getElementById("ul1")
+            var inputval = document.getElementById("input1").value;
+            console.log(inputval)
+            console.log(ul)
+            var createli = document.createElement('li')
+            createli.innerHTML = inputval
+            ul.appendChild(createli)
+            document.getElementById("input1").value = " "
+            console.log(createli)
+        }
+
+
+    </script>
+</body>
+
+</html>

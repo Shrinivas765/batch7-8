@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="id1"></h1>
+    <script>
+ let arr = ["A","B","C"]
+    //    localStorage.setItem('name','Abc')
+    //    localStorage.setItem('name2','xyz')
+    //    localStorage.setItem('arr',JSON.stringify( arr))
+
+    //    var namea =JSON.parse( localStorage.getItem('arr'));
+    //    console.log(namea)
+
+
+    //    localStorage.removeItem('name')
+    // localStorage.clear();
+    // sessionStorage.setItem('name','ABC')
+    // sessionStorage.setItem('name2','xyz')
+    // sessionStorage.removeItem('name2')
+    // sessionStorage.clear();
+
+
+    let today = new Date();
+    // let secDate = new Date('08-04-2021')
+    // console.log(secDate)
+    console.log(today)
+
+    var todaydate=today.getDate();
+    console.log(todaydate)
+    var month = today.getMonth();
+    month=month+1
+    console.log(month)
+    var year =today.getFullYear();
+    console.log(year)
+    document.getElementById('id1').innerHTML = todaydate + " /"+month +" /"+ year
+    // secDate.setFullYear(2004)
+//     var day = today.setDate(23);
+// console.log(secDate)
+    </script>
+</body>
+</html>

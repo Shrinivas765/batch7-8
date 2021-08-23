@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove note</title>
+    <style>
+        .contaier{
+            width: 400px;
+            margin: 0 auto;
+        }
+        .cards{
+            border: 2px solid black;
+            margin: 10px;
+            background-color: lightblue;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .cards p{
+            padding: 10px;
+        }
+        .deletebtn{
+            position: relative;
+            top: 0%;
+            left: 97%;
+        }
+        p{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quod rem rerum dolores non, porro commodi atque impedit adipisci corrupti incidunt obcaecati autem mollitia, corporis quia iste veniam? Excepturi, reprehenderit.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quod rem rerum dolores non, porro commodi atque impedit adipisci corrupti incidunt obcaecati autem mollitia, corporis quia iste veniam? Excepturi, reprehenderit.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quod rem rerum dolores non, porro commodi atque impedit adipisci corrupti incidunt obcaecati autem mollitia, corporis quia iste veniam? Excepturi, reprehenderit.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quod rem rerum dolores non, porro commodi atque impedit adipisci corrupti incidunt obcaecati autem mollitia, corporis quia iste veniam? Excepturi, reprehenderit.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, quod rem rerum dolores non, porro commodi atque impedit adipisci corrupti incidunt obcaecati autem mollitia, corporis quia iste veniam? Excepturi, reprehenderit.</p>
+        </div>
+    </div>
+    <script>
+        var c = document.querySelectorAll(".cards")
+        // console.log(c)
+        for (let cards of c){
+            let  p = cards.firstElementChild
+            // console.log(p)
+            let closebtn = document.createElement('button')
+            console.log(closebtn)
+            closebtn.innerHTML="X";
+            closebtn.className="deletebtn";
+            p.prepend(closebtn);
+            closebtn.addEventListener('click',function(){
+               cards.remove();
+               console.log(document)
+            })
+        }
+       
+    </script>
+</body>
+</html>

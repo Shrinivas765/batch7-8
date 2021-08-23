@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+        }
+        .cards{
+            border: 2px solid black;
+            margin: 5px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="id1">hsdfjs</h1>
+        <div class="cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia illum inventore magnam ipsa
+                reiciendis dignissimos nemo error voluptas, soluta ratione excepturi. Dolorem debitis maiores eveniet
+                eaque quas dignissimos architecto.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia illum inventore magnam ipsa
+                reiciendis dignissimos nemo error voluptas, soluta ratione excepturi. Dolorem debitis maiores eveniet
+                eaque quas dignissimos architecto.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia illum inventore magnam ipsa
+                reiciendis dignissimos nemo error voluptas, soluta ratione excepturi. Dolorem debitis maiores eveniet
+                eaque quas dignissimos architecto.</p>
+        </div>
+        <div class="cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia illum inventore magnam ipsa
+                reiciendis dignissimos nemo error voluptas, soluta ratione excepturi. Dolorem debitis maiores eveniet
+                eaque quas dignissimos architecto.</p>
+        </div>
+    </div>
+    <script>
+        var h1 = document.getElementById('id1')
+        console.log(h1)
+        h1.addEventListener('mousedown', function(e){
+            console.log("jjhgj")
+            // document.getElementById("id1").style.color="red"
+        })
+        h1.addEventListener('mousemove', function(e){
+            console.log("jjhgj")
+            // document.getElementById("id1").style.color="red"
+        })
+var cards = document.querySelectorAll(".cards")
+console.log(cards)
+for(let c of cards){
+let p = c.firstElementChild;
+var closebtn = document.createElement('button')
+closebtn.innerHTML = 'X';
+closebtn.className ='delete-btn';
+p.prepend(closebtn);
+closebtn.addEventListener('click',function(){
+    c.remove();
+})
+}
+    </script>
+
+</body>
+
+</html>

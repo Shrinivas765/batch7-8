@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="formatdate">08/08/2010</h1>
+    <script>
+var today = new Date();
+var date = today.getDate();
+console.log(date)
+var month = today.getMonth();
+month=month+1
+console.log(month)
+var year = today.getFullYear();
+console.log(year)
+console.log(today)
+document.getElementById("formatdate").innerHTML=date +"/"+month+"/"+year
+    </script>
+</body>
+</html>
