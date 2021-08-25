@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="age" placeholder="Enter here ticket book person age:">
+        <input type="text" id="movieid" placeholder="Enter here movie name">
+        <button onclick="submitval()">Submit</button>
+    </div>
+
+<div>
+    <label>Pay this :<span id="pay"></span></label>
+</div>
+
+    <script>
+        function submitval() {
+            console.log("entry")
+
+
+            var age = document.getElementById("age").value
+            console.log(age)
+            var movieid = document.getElementById("movieid").value;
+            var valuebook = 2;
+            var price;
+            if (age <= 10) {
+                price = 80;
+                console.log(price)
+            }
+            else {
+                price = 100
+                console.log(price)
+            }
+          var  pricepay =valuebook*price
+          console.log(pricepay)
+          document.getElementById("pay").innerHTML=pricepay
+        }
+        
+// document.getElementById
+
+    </script>
+</body>
+
+</html>

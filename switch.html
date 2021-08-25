@@ -1,0 +1,94 @@
+
+None selected
+
+Skip to content
+Using Gmail with screen readers
+Enable desktop notifications for Gmail.
+   OK  No thanks
+Meet
+New meeting
+Join a meeting
+Hangouts
+
+Conversations
+0.24 GB of 15 GB used
+Terms · Privacy · Program Policies
+Last account activity: 4 days ago
+Details
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+        var order="";
+        var total_price=0.0;
+        const tacos = 80.0;
+        const burrito = 75.0;
+        const cheese_burrito = 85.0;
+        const taco_salad = 100.0;
+       const taco_bowl = 150.0;
+        const bfcombo = 200.0;
+
+       do{
+        console.log("Welcome to TacoBell");
+        console.log("*******Menu*******");
+        console.log("1.Tacos  " + tacos + "\n" + "2.Burrito   " + burrito + "\n" + "3.Cheese_burrito  " + cheese_burrito + "\n" + "4.Taco_salad   " + taco_salad + "\n5.Taco_bowl  " + taco_bowl + "\n6.Breakfast combo  " + bfcombo + "\n7.Exit");
+        console.log("Please place your order");
+        var item=prompt("")
+        switch(item){
+                case "1": 
+                    order = order + "Tacos" ;
+                    total_price = total_price + tacos;
+                    break;
+                
+                case "2": 
+                    order = order + "Burrito" ;
+                    total_price = total_price + burrito;
+                    break;
+                
+                case "3": 
+                    order = order + "Cheese Burrito";
+                    total_price = total_price + cheese_burrito;
+                    break;
+                
+                case "4": 
+           
+            
+                    order = order + "Taco Salad";
+                    total_price = total_price + taco_salad;
+                    break;
+                
+                case "5": 
+                    order = order + "Taco Bowl" ;
+                    total_price = total_price + taco_bowl;
+                    break;
+                
+                case "6": 
+                    order = order + "Breakfast combo";
+                    total_price = total_price + bfcombo;
+                    break;
+                
+                case "7": 
+                    console.log("You have ordered\n"+ order);
+                    console.log("\nYour total bill is " + total_price);
+                    console.log("Do visit again!!");
+                default: 
+                    console.log("Not available");
+                
+            }
+            console.log("Your bill so far is " + total_price );
+        } while (item != 7);
+
+       
+        
+        
+    
+    </script>
+</body>
+</html>
