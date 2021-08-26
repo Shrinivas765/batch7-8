@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">yourbtn</button>
+   <div id="content"></div>
+   <script>
+       let mybtn = document.getElementById("btn")
+       let divcon =document.getElementById("content")
+       function getData(){
+        //    console.log("start getdata")
+           url="https://api.github.com/users"
+           fetch(url).then((res)=>{
+            
+               let s = res.text()
+               console.log(s)
+               return s
+
+           }).then((data)=>{
+               console.log(data)
+           })
+       }
+
+
+
+       function postData(){
+           url="http://dummy.restapiexample.com/api/v1/create";
+           data='{"name":"tesgjdfgst","salary":"123","age":"23"}'
+           params={
+               method:'post',
+               mode:'cors',
+               headers:{
+                   'Content-Type':'application/json',
+                   'Access-Control-Allow-Origin': '*'
+                  
+               },
+               
+               body:data
+           }
+           fetch(url,params).then(res=>res.json)
+           .then(data=>console.log(data)
+           )
+       }
+       postData();
+    //    console.log("kughj")
+    //    getData();
+    //    console.log("hgj")
+   </script>
+</body>
+</html>
