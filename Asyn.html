@@ -8,18 +8,23 @@
 </head>
 <body>
     <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
     <script>
         // setTimeout(function show(){
         //     console.log("Yess i am here")
         // },5000)
         // console.log("the end")
+        var a = new D
        setInterval( myfun,1000)
        function myfun(){
-           var d =new Date();
+           var d =new Date('');
            document.getElementById("h1").innerHTML=
            d.getHours() + ":" +
            d.getMinutes() +":"+
-           d.getSeconds()
+           d.getSeconds() 
+          document.getElementById('h2').innerHTML =a--
+
+
            
        }
     </script>

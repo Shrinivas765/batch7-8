@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="name" placeholder="enter your name"> -->
+    <input type="email" id="email" placeholder="enter your email">
+    <button onclick="subfun()">submit</button>
+    <script>
+        function subfun(){
+            // var val = document.getElementById('name').value;
+            // pattern= /^[a-zA-Z '.-]*$/;
+            // if(val =='')
+            // {
+            //     alert("please enter name")
+            // }
+            // else if(pattern.test(val)){
+            //     alert("Your name is"+val)
+            // }
+            // else{
+            //     alert('Please enter valid name')
+            // }
+            // console.log(val)
+
+
+
+            // var mobile =document.getElementById('mobile').value
+            // var mpattern=/^[7-9][0-9]{9}$/;
+            // var mbpattern =/^[0-9]$/;
+            // if(mobile =='')
+            // {
+            //     alert("please enter mobile no")
+            // }else if(mpattern.test(mobile)||mbpattern.test(mobile))
+            // {
+            //     alert("Your mobile no : "+mobile)
+            // }
+            // else 
+            // {
+            //     alert("Please enter valid mobile no")
+            // }
+
+
+            // var password = document.getElementById('password').value;
+            // pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+            // if(password == '')
+            // {
+            //     alert("please enter password")
+            // }
+            // else if(pattern.test(password))
+            // {
+            //     alert(password)
+            // }
+            // else{
+            //     alert("enter valid password")
+            // }
+
+            var email = document.getElementById('email').value;
+            pattern=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            if(email =='')
+            {
+                alert("enter email id......")
+            }else if(pattern.test(email))
+            {
+                alert(email)
+            }
+            else{
+                alert("enter valid email")
+            }
+        }
+    </script>
+</body>
+</html>

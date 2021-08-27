@@ -10,46 +10,65 @@
     <button id="btn">yourbtn</button>
    <div id="content"></div>
    <script>
-       let mybtn = document.getElementById("btn")
-       let divcon =document.getElementById("content")
-       function getData(){
-        //    console.log("start getdata")
-           url="https://api.github.com/users"
-           fetch(url).then((res)=>{
+    //    let mybtn = document.getElementById("btn")
+    //    let divcon =document.getElementById("content")
+    //    function getData(){
+    //     //    console.log("start getdata")
+    //        url="https://api.github.com/users"
+    //        fetch(url).then((res)=>{
             
-               let s = res.text()
-               console.log(s)
-               return s
+    //            let s = res.json()
+    //            console.log(s)
+    //            return s
 
-           }).then((data)=>{
-               console.log(data)
-           })
-       }
+    //        }).then((data)=>{
+    //            console.log(data)
+    //        })
+    //    }
 
 
 
-       function postData(){
-           url="http://dummy.restapiexample.com/api/v1/create";
-           data='{"name":"tesgjdfgst","salary":"123","age":"23"}'
-           params={
-               method:'post',
-               mode:'cors',
-               headers:{
-                   'Content-Type':'application/json',
-                   'Access-Control-Allow-Origin': '*'
+    //    function postData(){
+    //        url="http://dummy.restapiexample.com/api/v1/create";
+    //        data='{"name":"tesgjdfgst","salary":"123","age":"23"}'
+    //        params={
+    //            method:'post',
+    //            mode:'cors',
+    //            headers:{
+    //                'Content-Type':'application/json',
+    //                "Access-Control-Allow-Headers":"*",
+    // "Origin, X-Requested-With, Content-Type, Accept"
                   
-               },
+    //            },
                
-               body:data
-           }
-           fetch(url,params).then(res=>res.json)
-           .then(data=>console.log(data)
-           )
-       }
+    //            body:data
+    //        }
+    //        fetch(url,params).then(res=>res.json)
+    //        .then(data=>console.log(data)
+    //        )
+    //    }
        postData();
     //    console.log("kughj")
     //    getData();
     //    console.log("hgj")
+    function postData(){
+    fetch('http://dummy.restapiexample.com/api/v1/create', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'foro',
+    salary: 23,
+    age: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+}
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
    </script>
 </body>
 </html>

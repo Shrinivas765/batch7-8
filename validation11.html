@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="enter the name">
+        <input type="text" id="lname" placeholder="enter the name">
+        <button onclick="subfun()">submit</button>
+    </div>
+    <script>
+          
+
+          function subfun(){
+            var pattern = /^[7-9][0-9]{9}$/;
+              var a =document.getElementById('name').value
+              if(pattern.test(a)){
+                alert("Your mobile : "+a);
+            return true;
+              }
+              else{
+                  alert("enter valid")
+              }
+
+          }
+
+    </script>
+</body>
+</html>
