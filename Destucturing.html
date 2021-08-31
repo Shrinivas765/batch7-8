@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button onclick="subfun()">sub</button>
+    <script>
+        // var b =25;
+        // var a=[22,55,88]
+        // console.log(b)
+
+
+        // let a=25;
+        // let b=58
+
+
+    //   var object= [{key:value}]
+        // let a,b;
+        // [a,b,c,e,...d]=[25,85,58,99,33,56,47,55,77,88,99,66]
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // console.log(...d);
+
+            // let [a,...b] =[{name:"rahul",age:25,city:"pune"},
+            // {name:"pawan",age:23,city:"mumbai"},
+          var person=  [{name:"adu",age:22,city:"sangli",projectlist:["A","B"],socialwork:{
+              
+          }},
+            {name:"avni",age:20,city:"satara"},
+            {name:"pari",age:23,city:"mumbai"}]
+
+
+        // let a, b;
+        // [a,...b]=[{a:25},{b:55},{c:99},{d:100},{e:56}]
+        // console.log(a)
+        // console.log(b)
+
+
+
+        // function show(a,b,c,d,...e){
+        //     console.log(a)
+        //     console.log(b)
+        //     console.log(c)
+        //     console.log(d)
+        //     console.log(e)
+        // }
+        // show(25,26,27,28,29,10,320,30,40,65,69)
+
+// let a =[10,20,30];
+// let e = [...a];
+
+// a[0]=50
+// console.log(a)
+// console.log(e)
+
+
+// var a=25;
+// var  b =100;
+
+// let [a,...b]=[25,100,55,66,99]
+// console.log(a)
+// console.log(b)
+
+// function show(a,b,...c)
+// {
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+// }
+// show(25,50,60,52,6,89,4)
+
+
+
+
+        // var a =[10,20,30];
+        // var b =[...a]
+        // a[0]=50
+        // console.log(a)
+        // console.log(b)
+        // var a=22;
+        function subfun(){
+            var a=10;
+            console.log("sfg")
+            do{let x= setInterval(() => {
+            a--;
+            
+                document.getElementById("h1").innerHTML= a
+            
+           
+        }, 1000);
+        
+        }while(a==0)
+       
+    }
+
+//         var myVar = setInterval(myTimer, 1000);
+
+// function myTimer() {
+//   var d = new Date();
+//   var t = d.toLocaleTimeString();
+//   document.getElementById("demo").innerHTML = t;
+// }
+
+function myStopFunction() {
+  clearInterval(x);
+}
+
+    </script>
+    
+</body>
+</html>
