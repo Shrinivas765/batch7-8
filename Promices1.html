@@ -1,30 +1,53 @@
 <html>
-    <head>
-        <title>Promise</title>
-    </head>
-    <body>
-        <script>
-            let promise = new Promise(function (myresolve, myreject){
-                // let  x=2;
-                // if(x==1){
-                //     myresolve("i am resolved")
-                // }
-                // else{
-                //     myreject("sorry ..........")
-                // }
 
-                setTimeout(function(){
-                   myresolve("entry")
-                },3000)
-            });
-            promise.then(
-                function(value){
-                    console.log(value);
-                },
-                function(error){
-                    console.log(error)
-                }
-            )
-        </script>
-    </body>
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        // let promise = new Promise(function (myresolve, myreject){
+        //     // let  x=2;
+        //     // if(x==1){
+        //     //     myresolve("i am resolved")
+        //     // }
+        //     // else{
+        //     //     myreject("sorry ..........")
+        //     // }
+
+        //     setTimeout(function(){
+        //        myresolve("entry")
+        //     },3000)
+        // });
+        // promise.then(
+        //     function(value){
+        //         console.log(value);
+        //     },
+        //     function(error){
+        //         console.log(error)
+        //     }
+        // )
+
+        let p = new Promise(function (resolve, reject) {
+            // let a = 0;
+            // if (a == 0) {
+            //     resolve("success")
+            // }
+            // else {
+            //     reject("kjdfdk")
+            // }
+            setTimeout(function(){
+                resolve("skdfhksdf")
+            },10000)
+        })
+       p.then(function(value){
+           console.log(value)
+       },
+       function(err){
+           console.log(err)
+       }
+       )
+    </script>
+</body>
+
 </html>
